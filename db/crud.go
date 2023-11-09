@@ -1,13 +1,13 @@
 package db
 
 import (
+	"fmt"
 	"log"
 )
 
-const DB_NAME = "database_name"
-
 // CreateTable creates a sample table for demonstration
 func CreateTable(tableName, tableData string) {
+	fmt.Println(DB)
 	_, err := DB.Exec(`
 		CREATE TABLE IF NOT EXISTS `+ tableName +` (
 			`+ tableData +`
